@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+        <!--jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Boothstrap/css/index.css" type="text/css">
+    <title>Home </title>
+      <style>
+          .col-md-3
+          {
+          display: inline-block;
+          margin-left:-4px;
+          }
+          .carousel-indicators .active {
+          background-color: blue;
+            }
+          .col-md-3 img{
+          width:100%;
+          height:auto;
+          }
+          body .carousel-indicator li{
+          background-color: blue;
+          }
+          body .carousel-indicators{
+          bottom: 0;
+          }
+          body .carousel-control-prev-icon,
+          body .carousel-control-next-icon{
+          background-color: blue;
+          }
+           body .no-padding{
+           padding-left: 0,
+           padding-right: 0;
+           }
+  </style>
+  </head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-Header">
+    <button type="button" class="navbar-toggle"
+    data-toggle="collapse" data-target="#mynavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+
+    <a href="{% url 'index' %}" class="navbar-brand"  >Book Store</a>
+  </div>
+  <div class="collapse navbar-collapse " id="mynavbar">
+    <ul class="nav navbar-nav navbar-right">
+
+    <li>  <a href="{% url 'index' %}"><span class="glyphicon glyphicon-shopping-cart">Cart</span> </a></li>
+
+
+
+</ul>
+</div>
+</nav>
+      <div class="container">
+
+
+<br><br><br><br>
+          <form action="{% url 'result'  %}">
+
+              {% csrf_token %}
+              Enter the Book Name:
+              <input type="text" required name="book"><br>
+
+
+
+
+<input type="submit" name="" value="Search" name="search">
+          </form>
+
+
+
+
+<div class="jumbotron">
+  <h1>Welcome to our Book Store!</h1>
+  <p>we have the best Books for you.No need to hunt around.we have all in one place</p>
+</div>
+
+<div class="row">
+{% for i,j,k in mylist %}
+
+
+
+
+   <div class="col-sm-8 thumbnail">
+<a href="#" ><img src="{{i}}"></a>
+<div class="caption">
+  <h6>{{j}} </h6>
+  Price:Rs.1000.00
+
+
+   <!--  CHECK IT -->
+
+
+
+     <form action="{% url 'resultclick' k %}">
+
+              {% csrf_token %}
+
+              <input type="hidden" value="{{k}}" required name="id"><br>
+
+<input type="submit" class="btn btn-primary btn-block" value="Buy Now" name="" >
+          </form>
+
+
+
+
+
+</div>
+</div>
+
+
+
+    {% if forloop.counter1|divisibleby:4 and not forloop.last  %}
+</div><div class="row">
+          {% endif %}
+
+
+{% endfor %}
+      </div>
+
+
+</div>
+
+
+
+
+<footer>
+  <div class="container">
+    <center>
+Copyright © Lifestyle Store. All Rights Reserved Contact Us: +91 90000 00000
+</center>
+</div>
+</footer>
+
+</body>
+
+</html>
