@@ -11,7 +11,7 @@ astropy==4.0.2
 async-generator==1.10
 atomicwrites==1.4.0
 attrs @ file:///tmp/build/80754af9/attrs_1604765588209/work
-autopep8==1.4.4
+autopep8 @ file:///tmp/build/80754af9/autopep8_1615918855173/work
 Babel @ file:///tmp/build/80754af9/babel_1605108370292/work
 backcall==0.2.0
 backports.functools-lru-cache==1.6.1
@@ -27,7 +27,7 @@ bokeh @ file:///C:/ci/bokeh_1603297934731/work
 boto==2.49.0
 Bottleneck==1.3.2
 brotlipy==0.7.0
-certifi==2019.3.9
+certifi==2021.5.30
 cffi @ file:///C:/ci/cffi_1600699246375/work
 chardet==3.0.4
 click==7.1.2
@@ -49,8 +49,11 @@ decorator==4.4.2
 defusedxml==0.6.0
 diff-match-patch @ file:///tmp/build/80754af9/diff-match-patch_1594828741838/work
 distributed @ file:///C:/ci/distributed_1605066635297/work
+dj-database-url==0.5.0
+dj-static==0.0.6
 Django==2.2.14
 django-multiforloop==0.3.1
+django-toolbelt==0.0.1
 docutils==0.16
 entrypoints==0.3
 et-xmlfile==1.0.1
@@ -62,6 +65,7 @@ fsspec @ file:///tmp/build/80754af9/fsspec_1602684995936/work
 future==0.18.2
 gevent @ file:///C:/ci/gevent_1601397627942/work
 glob2==0.7
+gmpy2==2.0.8
 greenlet @ file:///C:/ci/greenlet_1600885448389/work
 gunicorn==20.1.0
 h5py==2.10.0
@@ -75,7 +79,7 @@ iniconfig @ file:///tmp/build/80754af9/iniconfig_1602780191262/work
 intervaltree @ file:///tmp/build/80754af9/intervaltree_1598376443606/work
 ipykernel @ file:///C:/ci/ipykernel_1596190155316/work/dist/ipykernel-5.3.4-py3-none-any.whl
 ipython @ file:///C:/ci/ipython_1604083276484/work
-ipython-genutils==0.2.0
+ipython_genutils==0.2.0
 ipywidgets @ file:///tmp/build/80754af9/ipywidgets_1601490159889/work
 isort @ file:///tmp/build/80754af9/isort_1602603989581/work
 itsdangerous==1.1.0
@@ -147,8 +151,9 @@ ply==3.11
 prometheus-client==0.8.0
 prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1602688806899/work
 psutil @ file:///C:/ci/psutil_1598370330503/work
+psycopg2==2.9.1
 py @ file:///tmp/build/80754af9/py_1593446248552/work
-pycodestyle==2.5.0
+pycodestyle @ file:///home/ktietz/src/ci_mi/pycodestyle_1612807597675/work
 pycosat==0.6.3
 pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
 pycurl==7.43.0.6
@@ -168,7 +173,7 @@ python-dateutil==2.8.1
 python-decouple==3.4
 python-jsonrpc-server @ file:///tmp/build/80754af9/python-jsonrpc-server_1600278539111/work
 python-language-server @ file:///tmp/build/80754af9/python-language-server_1600454544709/work
-pytz==2018.5
+pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
 PyWavelets @ file:///C:/ci/pywavelets_1601658407916/work
 pywin32==227
 pywin32-ctypes==0.2.0
@@ -183,7 +188,7 @@ regex @ file:///C:/ci/regex_1602770567298/work
 requests @ file:///tmp/build/80754af9/requests_1592841827918/work
 rope @ file:///tmp/build/80754af9/rope_1602264064449/work
 Rtree==0.9.4
-ruamel-yaml==0.15.87
+ruamel_yaml==0.15.87
 scikit-image==0.17.2
 scikit-learn @ file:///C:/ci/scikit-learn_1598377018496/work
 scipy @ file:///C:/ci/scipy_1604596260408/work
@@ -209,6 +214,7 @@ spyder @ file:///C:/ci/spyder_1599054115447/work
 spyder-kernels @ file:///C:/ci/spyder-kernels_1599051709837/work
 SQLAlchemy @ file:///C:/ci/sqlalchemy_1603818908746/work
 sqlparse==0.2.4
+static3==0.7.0
 statsmodels==0.12.0
 sympy @ file:///C:/ci/sympy_1605101511098/work
 tables==3.6.1
